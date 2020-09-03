@@ -12,9 +12,13 @@ class Room:
         return f'{self.name}, \n{self.description}, \n{self.storage}'
 
     def checkroom(self):
-        print(f"{self.storage}")
+        for x in range(len(self.storage)):
+            print(f"{self.storage[x]}")
     
-
+    def add_inventory(self, storage):
+        self.storage.append(storage)
     
+    def remove_item(self, storage):
+        del self.storage[storage]
 
 
